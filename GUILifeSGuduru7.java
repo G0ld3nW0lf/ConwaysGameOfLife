@@ -1,12 +1,5 @@
 /*
- * Shashank Guduru Period: 7
- * 
- * 6 hours
- * 
- * Overall this lab took me quite a while
- * and was hard. I don't think I did too 
- * well in using inheritance to its full
- * potential.
+ * Shashank Guduru
  */
 import javax.swing.*;
 import javax.swing.event.*;
@@ -42,14 +35,14 @@ public class GUILifeSGuduru7 extends Guduru_Shashank_7_Life implements ActionLis
     private Color[][] currentGen;
     private Color[][] tempGen;
 
-    public GUILifeSGuduru7(String filename){
-        super(filename);
+    public GUILifeSGuduru7(){
+        super("life100.txt");
         this.currentGen = new Color[wd][hd];
         this.tempGen = new Color[wd][hd];
     }
 
     public static void main(String[] args) {
-        GUILifeSGuduru7 bob = new GUILifeSGuduru7("life100.txt");
+        GUILifeSGuduru7 bob = new GUILifeSGuduru7();
         bob.createBoard();
         bob.createWindow();
     }
@@ -160,7 +153,7 @@ public class GUILifeSGuduru7 extends Guduru_Shashank_7_Life implements ActionLis
         ngen.addActionListener(this);
         cont = new JButton("Run");
         cont.addActionListener(this);
-        slider = new JSlider(100, 800, 200);
+        slider = new JSlider(100, 800, 600);
         slider.addChangeListener(this);
         
         p = new JPanel();
@@ -643,13 +636,6 @@ class Guduru_Shashank_7_Life
         public int getY(){
             return myY;
         }
-    }
-
-    public static void main(String[]args){
-        Guduru_Shashank_7_Life bob = new Guduru_Shashank_7_Life("life100.txt");
-        bob.print();
-        bob.runLife(10);
-        
     }
 }
 
