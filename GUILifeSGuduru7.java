@@ -1,12 +1,5 @@
 /*
- * Shashank Guduru Period: 7
- * 
- * 6 hours
- * 
- * Overall this lab took me quite a while
- * and was hard. I don't think I did too 
- * well in using inheritance to its full
- * potential.
+ * Shashank Guduru
  */
 import javax.swing.*;
 import javax.swing.event.*;
